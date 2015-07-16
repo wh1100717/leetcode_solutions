@@ -1,0 +1,24 @@
+## Invert Binary Tree 
+
+> https://leetcode.com/problems/invert-binary-tree/
+
+```javascript
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function(root) {
+    if(root === null){return null}
+    var tmp = root.left
+    root.left = invertTree(root.right)
+    root.right = invertTree(tmp)
+    return root
+};
+```
