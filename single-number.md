@@ -2,7 +2,7 @@
 
 > https://leetcode.com/problems/single-number/
 
-```
+```javascript
 /**
  * @param {number[]} nums
  * @return {number}
